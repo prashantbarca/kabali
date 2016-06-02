@@ -35,6 +35,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/prasha
 * Prashant Anantharaman
 * Mahesh Devalla
 * Sergey Bratus (Mentor, Advisor)
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
