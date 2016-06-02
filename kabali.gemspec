@@ -6,8 +6,8 @@ require 'kabali/version'
 Gem::Specification.new do |spec|
   spec.name          = "kabali"
   spec.version       = Kabali::VERSION
-  spec.authors       = ["Prashant"]
-  spec.email         = ["prashant.barca@gmail.com"]
+  spec.authors       = ["Prashant Anantharaman, Mahesh Devalla"]
+  spec.email         = ["prashant.barca@gmail.com, Mahesh Devalla"]
 
   spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
   spec.description   = %q{TODO: Write a longer description or delete this line.}
