@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+require 'kabali'
+
+code1 = <<END
+puts 1+1
+END
+
+code2 = <<END
+10.times do
+  puts 1+1
+end 
+END
+
+code3 = <<END
+  10.times do 
+    10.times do
+      puts 1+1
+    end
+  end
+END
+puts "---------"
+k = Kabali::Kabali.new(code1)
+k.traverse
+puts "---------"
+k = Kabali::Kabali.new(code2)
+k.traverse
+puts "---------"
+k = Kabali::Kabali.new(code3)
+k.traverse
