@@ -39,5 +39,5 @@ end
 puts display_string()
 CODE
 
-k = Kabali::Kabali.new(code5)   # Change the value here
+k = Kabali::Kabali.new(code3)   # Change the value here
 k.traverse
