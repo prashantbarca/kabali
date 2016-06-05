@@ -1,0 +1,66 @@
+===============
+||  Kabali    ||
+===============
+A tool to iterate through the YARV structures generated, and inspect the stack for simple programs. 
+
+Authors 
+===========
+Prashant Anantharaman - F002BZ4
+Mahesh Devalla - F002BY3
+
+Dev environment
+=========
+ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]
+
+Please note : You will have to change `lib/kabali.rb` to add the additional commands present in your version of ruby. 
+
+Directory Structure
+=========
+.
+├── bin
+│   ├── console
+│   ├── kabali
+│   └── setup
+├── CODE_OF_CONDUCT.md
+├── Gemfile
+├── Gemfile.lock
+├── kabali.gemspec
+├── lib
+│   ├── kabali
+│   │   └── version.rb
+│   └── kabali.rb
+├── LICENSE.txt
+├── prashant_mahesh.txt
+├── Rakefile
+├── README.md
+└── spec
+    ├── kabali_spec.rb
+    └── spec_helper.rb
+
+Relevant files 
+--------
+bin/console -- Runs a console with the classes loaded. For dev
+lib/kabali.rb -- This has all the code for the implementation.
+bin/kabali -- This has some test lines. You can switch different samples over here.
+Gemfile -- Has all the dependencies to be installed.
+
+Classes
+=========
+Kabali -- Has the list of blocks it contains and a stack data-structure. 
+MyBlock -- Stores the title of the block, and the disassembled code belonging to the block. 
+
+Methods
+=========
+Constructor (Initialize) -- Accepts a part of the code as input and disassembles it. It then extracts the blocks calling extract_blocks method.
+extract_blocks -- This method traverses through the disasm code and removes the blocks from it, storing it in separate objects. 
+traverse -- This method is public, and a user can call it to traverse through the disasm code line by line. This method calls the resolve and draw helpers repeatedly. 
+resolve -- This method has a table mapping instructions to actions. We need to add more content to this method to make it work better.
+draw -- This method clears the screen, accepts an enter key, and then displays the current location of the PC and the stack status. 
+
+Screenshots
+=========
+Files attached show how the code iterates, and a sample of the display.
+
+
+==================== THE END ====================
+
