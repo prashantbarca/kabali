@@ -20,11 +20,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First require the package. 
+
+    require 'kabali'
+
+Take a piece of code you want to disassemble. 
+    code = <<END
+    puts 1+1
+    END
+
+Create the object, calling the constructor would compile it down to the object code. 
+
+       k = Kabali::Kabali.new(code)
+
+Traverse through the object code using the `traverse` method. 
+	 
+	 k.traverse
+
+You will have to press enter at every step, to go to the next line of execution.
 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+
+You can find the classes in the file `lib/kabali.rb`. Add more methods to the `resolve` method, if you want. 
 
 ## Contributing
 

@@ -19,12 +19,25 @@ code3 = <<END
     end
   end
 END
-puts "---------"
-k = Kabali::Kabali.new(code1)
-k.traverse
-puts "---------"
-k = Kabali::Kabali.new(code2)
-k.traverse
-puts "---------"
-k = Kabali::Kabali.new(code3)
+
+code4 = <<END
+ 10.times do 
+   puts "abcd"
+ end
+END
+
+code5 =<<CODE
+def display_string
+  str = "Dynamic access."
+  10.times do
+    10.times do
+      str = str + "!"
+      puts str
+    end 
+  end
+end
+puts display_string()
+CODE
+
+k = Kabali::Kabali.new(code5)   # Change the value here
 k.traverse
